@@ -1,3 +1,5 @@
 #!/bin/bash
 
-cp vimrc ~/.vimrc
+BASEDIR=$(dirname $0)
+
+cp $BASEDIR/vimrc ~/.vimrc
