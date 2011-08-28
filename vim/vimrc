@@ -1,0 +1,9 @@
+set nocompatible
+syntax enable
+set number
+set tabstop=4
+set expandtab
+set showmatch
+set autoindent
+set smartindent
+set incsearch
