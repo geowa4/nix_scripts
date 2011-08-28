@@ -1,0 +1,8 @@
+function mcd {
+    mkdir $1
+    cd $1
+}
+
+function vbn {
+    find . -name $1 -exec vim {} \;
+}
