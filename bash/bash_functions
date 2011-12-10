@@ -6,3 +6,16 @@ function mcd {
 function vbn {
     find . -name $1 -exec vim {} \;
 }
+
+function ebn {
+    find . -name $1 -exec emacs -nw {} \;
+}
+
+function openall {
+    if [ -z $1 ]
+    then
+	emacs -nw $(ack-grep -f --text | xargs echo)
+    else
+	emacs -nw $(ack-grep -f --$1 | xargs echo)
+    fi
+}
