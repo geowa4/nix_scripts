@@ -55,13 +55,13 @@ function exitstatus {
     PURPLE="\[\e[0;35m\]"
     OFF="\[\033[m\]"
     PROMPT_SYMBOL=" \$ "
-    LOCATION="${YELLOW}{\h}${OFF} : ${PURPLE}[\w]${OFF}\n"
+    LOCATION="${YELLOW}\u${OFF}@${BLUE}\h${OFF} : ${PURPLE}\w${OFF}\n"
     
     if [ "${EXITSTATUS}" -eq 0 ]
     then
-        PS1="${LOCATION}${GREEN}\u${OFF}${PROMPT_SYMBOL}"
+        PS1="${LOCATION}${GREEN}\t${OFF}${PROMPT_SYMBOL}"
     else
-        PS1="${LOCATION}${RED}\u${OFF}${PROMPT_SYMBOL}"
+        PS1="${LOCATION}${RED}\t${OFF}${PROMPT_SYMBOL}"
     fi
 
     PS2=" > "
