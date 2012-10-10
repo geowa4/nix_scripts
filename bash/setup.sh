@@ -10,3 +10,8 @@ do
 	cp $BASEDIR/$f ~/.$f
     fi
 done
+
+if [[ `uname` == 'Darwin' ]]
+then
+    cp ~/.bashrc ~/.bash_profile
+fi
